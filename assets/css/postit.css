@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #666666;
+  padding-block: 50px;
+  padding-inline: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-block: 50px;
+  position: relative;
+}
+
+@keyframes apparizione {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.postit {
+  width: 230px;
+  height: 180px;
+  border: 1px solid lightgray;
+  margin-block: 20px;
+  box-shadow: 1px 8px 8px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  opacity: 0;
+}
+
+.postit h3 {
+  font-size: 1.6rem;
+  font-family: "Indie Flower", cursive;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  padding-block-start: 50px;
+}
+
+.postit p {
+  font-size: 1.2rem;
+  font-family: "Indie Flower", cursive;
+  text-align: center;
+  padding-block-start: 20px;
+}
+
+.yellow {
+  background-color: #fafbc9;
+}
+
+.green {
+  background-color: #b1d3b4;
+}
+
+.purple {
+  background-color: #b6b5d5;
+}
+
+.postit:nth-child(1) {
+  rotate: -4deg;
+  top: 6px;
+  left: 8px;
+  animation: apparizione 0.5s ease both 0.5s;
+}
+
+.postit:nth-child(2) {
+  rotate: 5deg;
+  top: 6px;
+  left: 261px;
+  animation: apparizione 0.5s ease both 1s;
+}
+
+.postit:nth-child(3) {
+  rotate: -10deg;
+  top: 6px;
+  right: 265px;
+  animation: apparizione 0.5s ease both 1.5s;
+}
+
+.postit:nth-child(4) {
+  rotate: 8deg;
+  top: 6px;
+  right: 2px;
+  animation: apparizione 0.5s ease both 2s;
+}
+
+.postit:nth-child(5) {
+  rotate: -4deg;
+  top: 238px;
+  left: 8px;
+  animation: apparizione 0.5s ease both 2.5s;
+}
+
+.postit:nth-child(6) {
+  rotate: -10deg;
+  top: 238px;
+  left: 261px;
+  animation: apparizione 0.5s ease both 3s;
+}
+
+.postit:nth-child(7) {
+  rotate: -4deg;
+  top: 238px;
+  right: 265px;
+  animation: apparizione 0.5s ease both 3.5s;
+}
+
+.postit:nth-child(8) {
+  rotate: 4deg;
+  top: 238px;
+  right: 2px;
+  animation: apparizione 0.5s ease both 4s;
+}
+
+.postit:hover {
+  scale: 1.2;
+  rotate: 0deg;
+  z-index: 1;
+}
